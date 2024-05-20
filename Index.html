@@ -3,53 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanook Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Random Number Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home">
-            <h1>Welcome to the Sanook Web!</h1>
-            <p>Have fun with this interactive webpage.</p>
-            <button id="colorButton">Change Background Color</button>
-        </section>
-
-        <section id="numberRoller">
-            <h2>Roll the Numbers!</h2>
-            <div id="numberContainer">
-                <span class="number">0</span>
-                <span class="number">1</span>
-                <span class="number">2</span>
-                <span class="number">3</span>
-                <span class="number">4</span>
-                <span class="number">5</span>
-            </div><br>
-            <button id="rollNumbersButton">Roll Numbers</button>
-            <button id="resetButton">Reset</button>
-        </section>
-
-        <table id="resultTable">
-            <tr>
-                <th>Roll</th>
-                <th>Result</th>
-            </tr>
-        </table>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Sanook Web. All rights reserved.</p>
-    </footer>
-
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h1>Random Number Generator</h1>
+            </div>
+        </div>
+        <div class="col-12 text-center">
+        <div class="btn-group">
+            <button id="colorButton" class="btn btn-primary">Change Background Color</button>
+        </div>
+        </div>
+        <br>
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <div class="btn-group">
+                    
+                    <button id="rollNumbersButton" class="btn btn-success">Roll Numbers</button>
+                    <button id="resetButton" class="btn btn-danger">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2>Numbers</h2>
+                <div class="d-flex justify-content-center">
+                    <div class="p-2 border"><span class="number display-4">0</span></div>
+                    <div class="p-2 border"><span class="number display-4">0</span></div>
+                    <div class="p-2 border"><span class="number display-4">0</span></div>
+                    <div class="p-2 border"><span class="number display-4">0</span></div>
+                    <div class="p-2 border"><span class="number display-4">0</span></div>
+                    <div class="p-2 border"><span class="number display-4">0</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>Results</h2>
+                <table id="resultTable" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Roll Number</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Results will be appended here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
